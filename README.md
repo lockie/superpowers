@@ -258,6 +258,23 @@ Restart any active Hermes sessions after installing. Note: Hermes has no
 post-compaction hook, so a very long session that compacts over its first
 turn loses the bootstrap — start a fresh session if skills stop triggering.
 
+### ECA
+
+Add Superpowers as a plugin source in `~/.config/eca/config.json` (or `.eca/config.json` for project-local):
+
+```json
+{
+  "plugins": {
+    "superpowers-source": {
+      "source": "https://github.com/obra/superpowers.git"
+    },
+    "install": ["superpowers"]
+  }
+}
+```
+
+Restart ECA. Detailed docs: [docs/README.eca.md](docs/README.eca.md)
+
 ## The Basic Workflow
 
 1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document.
